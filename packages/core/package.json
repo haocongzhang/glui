@@ -1,0 +1,51 @@
+{
+  "name": "@glui/core",
+  "version": "0.0.1-alpha.13",
+  "description": "glui core",
+  "author": "Haocong Zhang <kakera@gmail.com>",
+  "homepage": "https://github.com/zhanghaocong/glui#readme",
+  "license": "MIT",
+  "main": "dist/umd/core.js",
+  "module": "dist/esm/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "types": "dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanghaocong/glui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/zhanghaocong/glui/issues"
+  },
+  "devDependencies": {
+    "@pixi/core": "6.0.0-rc.2",
+    "@pixi/display": "6.0.0-rc.2",
+    "@pixi/filter-blur": "6.0.0-rc.2",
+    "@pixi/graphics": "6.0.0-rc.2",
+    "@pixi/interaction": "6.0.0-rc.2",
+    "@pixi/mixin-cache-as-bitmap": "6.0.0-rc.2",
+    "@pixi/mixin-get-global-position": "6.0.0-rc.2",
+    "@pixi/prepare": "6.0.0-rc.2",
+    "@pixi/sprite": "6.0.0-rc.2",
+    "@pixi/ticker": "6.0.0-rc.2",
+    "@types/react-reconciler": "^0.26.0",
+    "@types/scheduler": "^0.16.1",
+    "@types/stats.js": "^0.17.0",
+    "cross-env": "^7.0.3",
+    "react-reconciler": "^0.26.1",
+    "react-use-measure": "^2.0.3",
+    "scheduler": "^0.20.1",
+    "stats.js": "^0.17.0"
+  },
+  "gitHead": "f6276348d5ef0b11eb9b8d71fc7f62cce7225af2"
+}

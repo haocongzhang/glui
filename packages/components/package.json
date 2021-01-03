@@ -1,0 +1,37 @@
+{
+  "name": "@glui/components",
+  "version": "0.0.1-alpha.13",
+  "description": "> TODO: description",
+  "author": "Haocong Zhang <kakera@gmail.com>",
+  "homepage": "https://github.com/zhanghaocong/glui#readme",
+  "license": "MIT",
+  "main": "dist/umd/components.js",
+  "module": "dist/esm/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "types": "dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanghaocong/glui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/zhanghaocong/glui/issues"
+  },
+  "gitHead": "f6276348d5ef0b11eb9b8d71fc7f62cce7225af2",
+  "dependencies": {
+    "@glui/core": "^0.0.1-alpha.13"
+  },
+  "devDependencies": {
+    "@pixi/filter-drop-shadow": "^3.2.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "removeComments": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "incremental": true,
+    "baseUrl": "./",
+    "jsx": "react-jsx",
+    "paths": {
+      "@glui/*": [
+        "packages/*/src",
+      ]
+    },
+    "skipLibCheck": true,
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules",
+    "**/dist/**",
+    "**/lib/**",
+    "**/test/**",
+    "**/scripts/**",
+    "**/types/**",
+    "bundles/**/*.d.ts",
+    "rollup.config.js"
+  ],
+  "ts-node": {
+    "files": true
+  }
+}

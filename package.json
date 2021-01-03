@@ -1,0 +1,48 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lerna": "lerna",
+    "distclean": "rimraf \"{packages,out}/*/{.tsbuildinfo,dist}\"",
+    "predev": "yarn distclean",
+    "dev": "lerna run dev --no-private --parallel",
+    "dev:examples": "pushd packages/examples && yarn storybook; popd",
+    "build:examples": "pushd packages/examples && yarn build-storybook; popd",
+    "publish:examples": "pushd packages/examples && yarn deploy-storybook; popd",
+    "build": "lerna run build --no-private --parallel && rollup -c"
+  },
+  "devDependencies": {
+    "@lerna/batch-packages": "^3.16.0",
+    "@lerna/filter-packages": "^3.18.0",
+    "@lerna/project": "^3.21.0",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.17.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lerna": "^3.22.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.35.1",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-string": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-ts": "^1.3.7",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3"
+  }
+}
