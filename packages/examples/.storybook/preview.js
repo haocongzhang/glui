@@ -1,3 +1,5 @@
+import './global.css'
+
 export const parameters = {
   layout: 'fullscreen',
   options: {

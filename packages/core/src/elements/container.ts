@@ -1,8 +1,7 @@
 import { Filter } from '@pixi/core'
 import { Container } from '@pixi/display'
-import type { EventTargetProps, Cursor, IHitArea } from './event-target'
-import type { UpdatePayload } from './types'
-import { defaultApplyProps, defaultApplyUpdate, defaultDiffProps, mixin } from './utils'
+import type { Cursor, EventTargetProps, IHitArea } from './event-target'
+import { defaultApplyProps, defaultApplyUpdate, defaultDiffProps, mixin, UpdatePayload } from './utils'
 
 // 1. Props
 export type ContainerProps = {

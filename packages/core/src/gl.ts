@@ -2,7 +2,6 @@ import { BatchRenderer, Renderer } from '@pixi/core'
 import { InteractionManager } from '@pixi/interaction'
 import { Prepare } from '@pixi/prepare'
 // import '@pixi/mixin-cache-as-bitmap'
-import './mixins/cache-as-bitmap.mixin'
 import '@pixi/mixin-get-global-position'
 import { skipHello } from '@pixi/utils'
 

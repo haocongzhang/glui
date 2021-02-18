@@ -1,4 +1,9 @@
-import type { AnyElement, AnyProps, UpdatePayload } from './types'
+/* eslint-disable no-prototype-builtins */
+export type UpdatePayload = any
+
+export type AnyElement = any
+
+export type AnyProps = Record<string, any>
 
 export const defaultApplyProps = (el: AnyElement, props: AnyProps) => {
   for (const key in props) {
@@ -21,7 +26,6 @@ const set = <T>(el: AnyElement, key: string, value: T) => {
   }
   el[key] = value
 }
-
 
 export const defaultDiffProps = (_: AnyElement, oldProps: AnyProps, newProps: AnyProps) => {
   let propKey: string

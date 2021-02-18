@@ -12,7 +12,8 @@
     "dev:examples": "pushd packages/examples && yarn storybook; popd",
     "build:examples": "pushd packages/examples && yarn build-storybook; popd",
     "publish:examples": "pushd packages/examples && yarn deploy-storybook; popd",
-    "build": "lerna run build --no-private --parallel && rollup -c"
+    "build": "lerna run build --no-private --parallel && rollup -c",
+    "lint": "eslint packages/**/src"
   },
   "devDependencies": {
     "@lerna/batch-packages": "^3.16.0",
@@ -34,15 +35,15 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.35.1",
+    "rollup": "^2.42.3",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-string": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-ts": "^1.3.7",
+    "@wessberg/rollup-plugin-ts": "^1.3.10",
     "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "ts-loader": "^8.0.14",
-    "typescript": "^4.1.3"
+    "typescript": "^4.2.3"
   }
 }

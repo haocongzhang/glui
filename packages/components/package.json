@@ -1,8 +1,8 @@
 {
   "name": "@glui/components",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "description": "> TODO: description",
-  "author": "Haocong Zhang <kakera@gmail.com>",
+  "author": "Zhang Haocong <kakera@gmail.com>",
   "homepage": "https://github.com/zhanghaocong/glui#readme",
   "license": "MIT",
   "main": "dist/umd/components.js",
@@ -29,7 +29,7 @@
   },
   "gitHead": "f6276348d5ef0b11eb9b8d71fc7f62cce7225af2",
   "dependencies": {
-    "@glui/core": "^0.0.1"
+    "@glui/core": "^0.0.2-alpha.0"
   },
   "devDependencies": {
     "@pixi/filter-drop-shadow": "^3.2.0"

@@ -10,7 +10,7 @@ import sourcemaps from 'rollup-plugin-sourcemaps'
 import { string } from 'rollup-plugin-string'
 import { terser } from 'rollup-plugin-terser'
 import analyze from 'rollup-plugin-analyzer'
-import ts from 'rollup-plugin-ts'
+import ts from '@wessberg/rollup-plugin-ts'
 
 /**
  * 获得排序后的 packages
@@ -28,7 +28,7 @@ const minify = (name) => {
 
 const getPlugins = ({ __PROD__ }) => {
   const res = [
-    sourcemaps(),
+    // sourcemaps(),
     resolve({
         browser: true,
         preferBuiltins: false,
