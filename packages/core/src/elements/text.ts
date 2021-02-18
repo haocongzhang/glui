@@ -10,7 +10,7 @@ export type TextProps = {
 // 2. Element
 export class TextElement extends Text {
 
-  private __width: number = 0
+  private __width = 0
 
   get width (): number {
     return this.__width

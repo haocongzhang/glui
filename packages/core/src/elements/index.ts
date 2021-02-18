@@ -1,22 +1,26 @@
 import { ContainerElement, ContainerProps, createContainer } from './container'
-import { createGraphics, GraphicsElement, GraphicsProps } from './graphics'
+import { createGraphics, createGraphicsGl, GraphicsElement, GraphicsProps, GraphicsGlElement, GraphicsGlProps } from './graphics'
 import { createImage, ImageElement, ImageProps } from './image'
 import { createText, TextElement, TextProps } from './text'
 import { createTextInput, TextInputElement, TextInputProps } from './text-input'
+import type { AnyProps } from './utils'
 
 export type ElementType =
   'Container'
   | 'Image' 
   | 'Text' 
   | 'Graphics' 
+  | 'GraphicsGl'
   | 'ScrollView'
   | 'TextInput'
 
-export type UpdatePayload = any
-
-export type AnyElement = any
-
-export type AnyProps = Record<string, any>
+export type { ContainerElement, ContainerProps } from './container'
+export * from './event-target'
+export type { Draw, GraphicsElement, GraphicsProps, GraphicsGlElement, GraphicsGlProps } from './graphics'
+export type { ImageElement, ImageProps } from './image'
+export type { TextElement, TextProps } from './text'
+export type { TextInputElement, TextInputProps } from './text-input'
+export type { AnyElement, AnyProps, UpdatePayload } from './utils'
 
 export function createElement (type: 'Container', props?: ContainerProps): ContainerElement
 
@@ -25,6 +29,8 @@ export function createElement (type: 'Text', props?: TextProps): TextElement
 export function createElement (type: 'Image', props?: ImageProps): ImageElement
 
 export function createElement (type: 'Graphics', props?: GraphicsProps): GraphicsElement
+
+export function createElement (type: 'GraphicsGl', props?: GraphicsGlProps): GraphicsGlElement
 
 export function createElement (type: 'TextInput', props?: TextInputProps): TextInputElement
 
@@ -37,6 +43,8 @@ export function createElement (type: ElementType, props?: AnyProps): ContainerEl
     return createImage(props as ImageProps)
   } else if (type === 'Graphics') {
     return createGraphics(props as GraphicsProps)
+  } else if (type === 'GraphicsGl') {
+    return createGraphicsGl(props as GraphicsGlProps)
   } else if (type === 'TextInput') {
     return createTextInput(props as TextInputProps)
   } else if (type === 'ScrollView') {
@@ -46,9 +54,4 @@ export function createElement (type: ElementType, props?: AnyProps): ContainerEl
   throw new Error(`createElement error: invalid type: ${type}`)
 }
 
-export type { ContainerElement, ContainerProps } from './container'
-export * from './event-target'
-export type { Draw, GraphicsElement, GraphicsProps } from './graphics'
-export type { ImageElement, ImageProps } from './image'
-export type { TextElement, TextProps } from './text'
-export type { TextInputElement, TextInputProps } from './text-input'
+

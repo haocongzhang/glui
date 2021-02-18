@@ -129,7 +129,6 @@ export const GraphicsPerformance: FC = () => {
         rotation={ it.rotation }
         onMouseOver={ handleMouseEvent }
         onMouseOut={ handleMouseEvent }
-        cacheAsBitmap={ true }
       >
         <Graphics
           draw={ drawOut }

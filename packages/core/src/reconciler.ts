@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import ReactReconciler from 'react-reconciler'
 
 export const Reconciler = process.env.DEBUG_RECONCILER === 'true' ? DebugReconciler : ReactReconciler
